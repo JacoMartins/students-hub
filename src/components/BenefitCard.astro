@@ -1,0 +1,31 @@
+---
+interface Props {
+  titulo: string;
+  descricao: string;
+  icon: string;
+  href?: string;
+}
+
+const { titulo, descricao, icon, href } = Astro.props;
+---
+<div class="flex items-start gap-4 border border-[#262626] rounded-xl p-5 bg-[#0f0f0f] card-3d">
+  <span class="text-xl mt-0.5 flex-shrink-0">{icon}</span>
+  <div class="flex-1 min-w-0">
+    <h3 class="font-semibold text-white mb-1">{titulo}</h3>
+    <p class="text-sm text-[#888] leading-relaxed">{descricao}</p>
+  </div>
+  {href && (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Saiba mais sobre ${titulo}`}
+      class="btn-icon-3d w-8 h-8 text-[#aaa] hover:text-white flex-shrink-0 mt-0.5"
+    >
+      <!-- Phosphor ArrowSquareOut (regular) -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor">
+        <path d="M224,104a8,8,0,0,1-16,0V59.32l-82.34,82.34a8,8,0,0,1-11.32-11.32L196.68,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v72H48V80h72a8,8,0,0,0,0-16H48A16,16,0,0,0,32,80V208a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"/>
+      </svg>
+    </a>
+  )}
+</div>

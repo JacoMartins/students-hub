@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Edu TAS Beginner';
+  src: url('/fonts/edu-tas-beginner-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Serif';
+  src: url('/fonts/ibm-plex-serif-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Serif';
+  src: url('/fonts/ibm-plex-serif-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Serif';
+  src: url('/fonts/ibm-plex-serif-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    background-color: #0c0c0c;
+    color: #ffffff;
+  }
+
+  body {
+    font-family: 'IBM Plex Serif', Georgia, serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background: #ffffff22;
+  }
+}
+
+@layer components {
+  /* 3D raised button — press effect */
+  .btn-3d {
+    @apply border border-[#3a3a3a] rounded-lg transition-all duration-100;
+    box-shadow: 0 3px 0 #080808, 0 4px 12px rgba(0, 0, 0, 0.45);
+  }
+  .btn-3d:hover {
+    @apply -translate-y-px;
+    box-shadow: 0 4px 0 #080808, 0 6px 16px rgba(0, 0, 0, 0.5);
+  }
+  .btn-3d:active {
+    transform: translateY(3px);
+    box-shadow: 0 0px 0 #080808, 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Small icon button with 3D press */
+  .btn-icon-3d {
+    @apply flex items-center justify-center rounded-md border border-[#333] bg-[#181818] transition-all duration-100;
+    box-shadow: 0 2px 0 #080808;
+  }
+  .btn-icon-3d:hover {
+    @apply -translate-y-px;
+    box-shadow: 0 3px 0 #080808;
+  }
+  .btn-icon-3d:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+
+  /* Card with depth */
+  .card-3d {
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.04),
+      0 6px 24px rgba(0, 0, 0, 0.55),
+      0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+}

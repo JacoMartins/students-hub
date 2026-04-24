@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LivrosSearch from '../components/LivrosSearch';
+import livros from '../data/livros.json';
+import type { Book } from '../components/LivrosSearch';
+
+const books = livros as Book[];
+---
+<BaseLayout title="Livros" activePage="/livros">
+  <h1 class="text-3xl font-semibold mb-8">Livros filtrados por PDF ou EPUB</h1>
+  <LivrosSearch books={books} client:only="preact" />
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NewsletterCard from '../components/NewsletterCard.astro';
+import AcervoBrowser from '../components/AcervoBrowser';
+import newsletter from '../data/newsletter.json';
+
+const rootFolderId = import.meta.env.PUBLIC_ACERVO_ROOT_FOLDER_ID ?? '';
+const apiKey = import.meta.env.PUBLIC_GOOGLE_API_KEY ?? '';
+---
+<BaseLayout title="Início" activePage="/">
+  <!-- Newsletter -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-5">Newsletter</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {newsletter.map(item => (
+        <NewsletterCard titulo={item.titulo} descricao={item.descricao} href={item.href ?? undefined} />
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mb-12 border-t border-[#1a1a1a] pt-10">
+    <p class="text-[#bbb] leading-relaxed mb-5 max-w-2xl">
+      Você quer ficar por dentro da quantidade de oportunidades que o email institucional te traz?
+    </p>
+    <a
+      href="/beneficios"
+      class="btn-3d inline-flex items-center gap-2 bg-[#181818] text-sm text-white px-5 py-2.5"
+    >
+      Dê uma olhadinha na página de benefícios
+      <!-- Phosphor ArrowRight (regular) -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor">
+        <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- Acervo preview -->
+  <section>
+    <h2 class="text-2xl font-semibold mb-5">Acervo estudantil</h2>
+    <AcervoBrowser rootFolderId={rootFolderId} apiKey={apiKey} client:only="preact" />
+  </section>
+</BaseLayout>

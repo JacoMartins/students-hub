@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AcervoBrowser from '../components/AcervoBrowser';
+
+const rootFolderId = import.meta.env.PUBLIC_ACERVO_ROOT_FOLDER_ID ?? '';
+const apiKey = import.meta.env.PUBLIC_GOOGLE_API_KEY ?? '';
+---
+<BaseLayout title="Acervo estudantil" activePage="/acervo">
+  <h1 class="text-3xl font-semibold mb-8">Acervo estudantil</h1>
+  <AcervoBrowser rootFolderId={rootFolderId} apiKey={apiKey} client:only="preact" />
+</BaseLayout>

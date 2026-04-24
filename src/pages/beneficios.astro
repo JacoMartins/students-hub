@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BenefitCard from '../components/BenefitCard.astro';
+import beneficios from '../data/beneficios.json';
+---
+<BaseLayout title="Benefícios" activePage="/beneficios">
+  <h1 class="text-3xl font-semibold mb-3">Benefícios</h1>
+  <p class="text-[#888] mb-10 max-w-3xl leading-relaxed">
+    Os alunos do Instituto Federal que têm email institucional estão abertos à uma gama de benefícios,
+    então decidimos listar abaixo para que você fique por dentro de tudo!
+  </p>
+
+  <div class="flex flex-col gap-3 mb-12">
+    {beneficios.beneficios_estudantis.map(b => (
+      <BenefitCard titulo={b.titulo} descricao={b.descricao} icon={b.icon} href={b.href} />
+    ))}
+  </div>
+
+  <h2 class="text-xl font-semibold mb-1">Ferramentas de produtividade e interesse</h2>
+  <p class="text-[#666] text-sm mb-5">Para estudar bem...</p>
+  <div class="flex flex-col gap-3">
+    {beneficios.ferramentas.map(b => (
+      <BenefitCard titulo={b.titulo} descricao={b.descricao} icon={b.icon} href={b.href} />
+    ))}
+  </div>
+</BaseLayout>

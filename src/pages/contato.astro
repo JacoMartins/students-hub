@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Entre em contato" activePage="/contato">
+  <h1 class="text-3xl font-semibold mb-4">Entre em contato conosco</h1>
+  <p class="text-[#888] mb-8">
+    Email do projeto:
+    <a href="mailto:studentshubproject@gmail.com" class="text-white hover:underline">
+      studentshubproject@gmail.com
+    </a>
+  </p>
+
+  <h2 class="text-xl font-semibold mb-4">Fale com os membros da nossa equipe</h2>
+  <ul class="flex flex-col gap-2">
+    <li class="text-[#ccc]">
+      Daniel Cartaxo:
+      <a href="mailto:daniel.contato@gmail.com" class="text-white hover:underline">
+        daniel.contato@gmail.com
+      </a>
+    </li>
+    <li class="text-[#ccc]">
+      Jacó Alves:
+      <a href="mailto:jaco.contato@gmail.com" class="text-white hover:underline">
+        jaco.contato@gmail.com
+      </a>
+    </li>
+  </ul>
+</BaseLayout>

@@ -1,0 +1,18 @@
+---
+interface Props {
+  titulo: string;
+  descricao: string;
+  href?: string;
+}
+
+const { titulo, descricao, href } = Astro.props;
+---
+<a
+  href={href ?? '#'}
+  target={href ? '_blank' : undefined}
+  rel={href ? 'noopener noreferrer' : undefined}
+  class="block border border-[#262626] rounded-xl p-5 bg-[#0f0f0f] hover:bg-[#141414] hover:border-[#333] transition-colors card-3d"
+>
+  <h3 class="font-semibold text-white leading-snug mb-2">{titulo}</h3>
+  <p class="text-sm text-[#888] leading-relaxed">{descricao}</p>
+</a>

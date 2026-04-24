@@ -1,0 +1,42 @@
+{
+  "beneficios_estudantis": [
+    {
+      "titulo": "Github for Students",
+      "descricao": "Se você tiver um cadastro na plataforma de desenvolvimento Github, o email institucional te dá direito ao Github for Students, que traz benefícios de um usuário Github Pro e alguns benefícios extras como créditos para usar em Microsoft Azure e outros que são exibidos após comprovar a matrícula na plataforma.",
+      "icon": "🧑‍💻",
+      "href": "https://education.github.com/pack"
+    },
+    {
+      "titulo": "Gemini Pro",
+      "descricao": "Este benefício é o mais simples de se ativar. Usando o seu email institucional no Gemini, clique no modelo que está sendo usado, que provavelmente é o \"Rápido\" e mude para \"Pro\". Você tem um limite bem alto de uso para ele. Além de ler vários livros e analisar bem conteúdos, é ótimo para programação e estudos mais complexos.",
+      "icon": "✦",
+      "href": "https://gemini.google.com"
+    },
+    {
+      "titulo": "Samsung for Students",
+      "descricao": "Você pode se registrar no Samsung for Students. Ao criar o seu Student ID na Samsung, após comprovar que estuda na instituição em que está matriculado, você passa a ter descontos, aumento de parcelas em até 18x e outros benefícios em compras na loja Samsung.",
+      "icon": "🛒",
+      "href": "https://www.samsung.com/br/microsite/samsung-for-students/"
+    }
+  ],
+  "ferramentas": [
+    {
+      "titulo": "NotebookLM",
+      "descricao": "Imagine uma inteligência artificial dedicada para o assunto que você quer estudar, com a fonte que você precisa. O Google NotebookLM permite que você faça upload de arquivos fonte como livros PDF, textos, artigos e sintetize de uma forma que ele te explica exatamente o que você quer aprender.",
+      "icon": "📓",
+      "href": "https://notebooklm.google.com"
+    },
+    {
+      "titulo": "Google Agenda",
+      "descricao": "Tem horários de aula? Ponha no Google Agenda e sincronize seu gmail com o app de calendário padrão do seu celular. Tem prova? Ponha no calendário também. Horários para cursinhos? Que se repetem? Semanalmente até junho? Tudo isso você pode configurar para prevenir faltas.",
+      "icon": "📅",
+      "href": "https://calendar.google.com"
+    },
+    {
+      "titulo": "Todoist",
+      "descricao": "Aplicação simples de checklist e datas para você guardar suas tarefas do dia a dia e entender o andamento.",
+      "icon": "✅",
+      "href": "https://todoist.com"
+    }
+  ]
+}
